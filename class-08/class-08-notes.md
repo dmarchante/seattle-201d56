@@ -13,9 +13,21 @@ Java - compiled
 ---
 - helper
 - core functionality
-- ???
+- event handlers
 
 ##EXECUTABLES
 ---
 - function calls
 - page load actions
+- event listeners
+
+## JS Interpreter
+---
+### Gathering Info
+- variable names
+- loads function declaration
+
+### Execution
+- variables assigned
+- functions run
+- event listeners turn on
