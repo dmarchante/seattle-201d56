@@ -13,7 +13,7 @@
     <td>Buddy</td>
     <td>Orange and White</td>
     <td>VERY long</td>
-  </tr>
+  </tr> 
 </table>
 
 Tables are built in the same way that a typewriter types: left-to-right, top-to-bottom.
@@ -37,7 +37,7 @@ function Cat(name, color, tailSize) {
 }
 
 // We need to create our Cat instances
-new Cat('Buddy', 'Orange and White', 'VERY large');
+new Cat('Buddy', 'Orange and White', 'VERY long');
 new Cat('Alistair (R.I.P.)', 'Orange', 'Small');
 new Cat('Trillian', 'Black/Orange', 'very small');
 new Cat('Aloysius', 'gray tabby', 'Kitten-sized');
@@ -50,30 +50,58 @@ console.table(allCats);
 
 Cat.prototype.render = function() {
   // make a tr
-  
+  let trEl = document.createElement('tr');
+  let tdEl;
+
   // create, content, append for "Name"
+  tdEl = document.createElement('td');
+  tdEl.textContent = this.name;
+  trEl.appendChild(tdEl);
 
   // create, content, append for "Color"
+  tdEl = document.createElement('td');
+  tdEl.textContent = this.color;
+  trEl.appendChild(tdEl);
 
   // create. content, append for "Tail Size"
+  tdEl = document.createElement('td');
+  tdEl.textContent = this.tailSize;
+  trEl.appendChild(tdEl);
 
   // append the tr to the table
+  catTable.appendChild(trEl);
 
 };
 
 // We need a separate function to make the table header
 
 function makeHeaderRow() {
+  let trEl = document.createElement('tr');
+  let thEl;
 
+  thEl = document.createElement('th');
+  thEl.textContent = 'Name';
+  trEl.appendChild(thEl);
+
+  thEl = document.createElement('th');
+  thEl.textContent = 'Color';
+  trEl.appendChild(thEl);
+
+  thEl = document.createElement('th');
+  thEl.textContent = 'TailSize';
+  trEl.appendChild(thEl);
+
+  catTable.appendChild(trEl);
 }
-
-
 
 // It would be nice to have a single function that renders all of the individual cat rows
 function renderAllCats() {
-
+  for(let i = 0; i < allCats.length; i++){
+    allCats[i].render();
+  }
 }
 
 // Now we need to call our functions: the one for the header row, and the one for generating the individual cat rows
-
+makeHeaderRow();
+renderAllCats();
 // Don't forget in the Chrome dev tools to observe the difference between the HTML shown in the Sources tab versus the Elements tab!
