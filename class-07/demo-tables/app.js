@@ -50,7 +50,6 @@ console.table(allCats);
 
 Cat.prototype.render = function() {
   // make a tr
-<<<<<<< HEAD
   let trEl = document.createElement('tr');
   let tdEl;
 
@@ -72,29 +71,11 @@ Cat.prototype.render = function() {
   // append the tr to the table
   catTable.appendChild(trEl);
 
-=======
-  var trEl = document.createElement('tr');
-  // create, content, append for "Name" column
-  var tdEl = document.createElement('td');
-  tdEl.textContent = this.name;
-  trEl.appendChild(tdEl);
-  // create, content, append for "Color" column
-  tdEl = document.createElement('td');
-  tdEl.textContent = this.color;
-  trEl.appendChild(tdEl);
-  // create. content, append for "Tail Size" column
-  tdEl = document.createElement('td');
-  tdEl.textContent = this.tailSize;
-  trEl.appendChild(tdEl);
-  // append the tr to the table
-  catTable.appendChild(trEl);
->>>>>>> upstream/master
 };
 
 // We need a separate function to make the table header
 
 function makeHeaderRow() {
-<<<<<<< HEAD
   let trEl = document.createElement('tr');
   let thEl;
 
@@ -105,20 +86,6 @@ function makeHeaderRow() {
   thEl = document.createElement('th');
   thEl.textContent = 'Color';
   trEl.appendChild(thEl);
-=======
-  var trEl = document.createElement('tr');
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Name';
-  trEl.appendChild(thEl);
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Color';
-  trEl.appendChild(thEl);
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Tail';
-  trEl.appendChild(thEl);
-  catTable.appendChild(trEl);
-}
->>>>>>> upstream/master
 
   thEl = document.createElement('th');
   thEl.textContent = 'TailSize';
@@ -129,11 +96,7 @@ function makeHeaderRow() {
 
 // It would be nice to have a single function that renders all of the individual cat rows
 function renderAllCats() {
-<<<<<<< HEAD
   for(let i = 0; i < allCats.length; i++){
-=======
-  for (var i = 0; i < allCats.length; i++) {
->>>>>>> upstream/master
     allCats[i].render();
   }
 }
@@ -141,8 +104,4 @@ function renderAllCats() {
 // Now we need to call our functions: the one for the header row, and the one for generating the individual cat rows
 makeHeaderRow();
 renderAllCats();
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
 // Don't forget in the Chrome dev tools to observe the difference between the HTML shown in the Sources tab versus the Elements tab!
