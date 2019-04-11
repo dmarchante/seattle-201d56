@@ -7,7 +7,9 @@ Cart() - completed
 - removeItem() - to be completed
 - saveToLS() - to be completed (8)
 CartItem() - completed
+
 Product() - completed
+
 allProducts = [] - completed (1)
 generateCatalog() - completed (2)
 
