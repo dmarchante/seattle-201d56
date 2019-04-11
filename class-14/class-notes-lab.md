@@ -3,9 +3,9 @@
 ## app.js
 
 Cart() - completed
-- addItem() - to be completed
+- addItem() - completed
 - removeItem() - to be completed
-- saveToLS() - to be completed (8)
+- saveToLS() - completed (8)
 CartItem() - completed
 
 Product() - completed
@@ -18,15 +18,15 @@ generateCatalog() - completed (2)
 
 create cart instance - completed (3)
 
-populateForm() - to be completed (4)
+populateForm() - completed (4)
 
-handleSubmit() - to be completed (6)
+handleSubmit() - completed (6)
 
-addSelectedToCart() - to be completed (7)
+addSelectedToCart() - completed (7)
 
-updateCounter() - to be completed (9)
+updateCounter() - completed (9)
 
-updateCartPreview() - to be completed (10)
+updateCartPreview() - completed (10)
 
 event listener - completed
 
